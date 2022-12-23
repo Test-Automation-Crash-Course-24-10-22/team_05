@@ -9,7 +9,7 @@ browser.get('https://rozetka.com.ua/ua/asus-90nb0ty1-m00vf0/p346597995/')
 browser.execute_script("window.scrollTo(0, 600);")
 time.sleep(2)
 
-right_arrow = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1]/div[1]/div/rz-product-gallery-main/app-slider[2]/div/button[2]')
+right_arrow = browser.find_element(By.CLASS_NAME, '//*[@id="#scrollArea"]/div[1]/div[1]/div/rz-product-gallery-main/app-slider[2]/div/button[2]')
 right_arrow.click()
 time.sleep(2)
 left_arrow = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1]/div[1]/div/rz-product-gallery-main/app-slider[2]/div/button[1]')

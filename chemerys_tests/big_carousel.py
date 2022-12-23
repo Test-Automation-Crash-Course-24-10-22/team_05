@@ -10,7 +10,6 @@ browser.execute_script("window.scrollTo(0, 200);")
 time.sleep(2)
 
 right_arrow = browser.find_element(By.CLASS_NAME, 'simple-slider__control--next')
-
 x = 0
 while x < 14:
     right_arrow.click()
@@ -18,7 +17,6 @@ while x < 14:
     x += 1
 
 left_arrow = browser.find_element(By.CLASS_NAME, 'simple-slider__control--prev')
-
 y = 0
 while y < 14:
     left_arrow.click()
