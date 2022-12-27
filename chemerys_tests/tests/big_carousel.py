@@ -23,8 +23,3 @@ while y < 14:
     time.sleep(1)
     y += 1
 
-
-
-
-
-

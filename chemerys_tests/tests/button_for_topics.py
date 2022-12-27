@@ -13,5 +13,3 @@ button_for_topics = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1
 button_for_topics.click()
 time.sleep(5)
 
-
-

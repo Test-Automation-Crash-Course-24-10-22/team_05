@@ -35,3 +35,4 @@ time.sleep(1)
 button_for_exit = browser.find_element(By.XPATH, '/html/body/app-root/rz-single-modal-window/div[3]/div[1]/button')
 button_for_exit.click()
 time.sleep(1)
+
