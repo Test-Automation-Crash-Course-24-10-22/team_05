@@ -4,10 +4,11 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+browser.maximize_window()
 
 def scroll():
     browser.get('https://rozetka.com.ua/ua/asus-90nb0ty1-m00vf0/p346597995/')
-    browser.execute_script("window.scrollTo(0, 600);")
+    browser.execute_script("window.scrollTo(0, 500);")
     time.sleep(2)
 
 def right_and_left_arrows():
@@ -46,7 +47,7 @@ def slides_scroll():
     reversed_list = [slide_14, slide_13, slide_12, slide_11, slide_10, slide_9, slide_8, slide_7, slide_6, slide_5, slide_4,
                      slide_3, slide_2, slide_1, slide_0]
     for y in reversed_list:
-        if y == slide_5:
+        if y == slide_6:
             left_arrow.click()
             time.sleep(2)
         y.click()

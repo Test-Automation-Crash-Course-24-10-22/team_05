@@ -4,14 +4,15 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+browser.maximize_window()
 
 def scroll():
     browser.get('https://rozetka.com.ua/ua/asus-90nb0ty1-m00vf0/p346597995/')
-    browser.execute_script("window.scrollTo(0, 200);")
+    browser.execute_script("window.scrollTo(0, 300);")
     time.sleep(2)
 
 def first_comparement():
-    button_for_comparement = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1]/div[2]/rz-product-main-info/div[1]/div[1]/ul/li[3]/ul/li[1]')
+    button_for_comparement = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1]/div[2]/rz-product-main-info/div[1]/div[1]/ul/li/ul/li[1]')
     button_for_comparement.click()
     time.sleep(1)
 
@@ -33,7 +34,7 @@ def second_comparement():
     time.sleep(1)
 
 def favourite_button():
-    button_for_favourite = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1]/div[2]/rz-product-main-info/div[1]/div[1]/ul/li[3]/ul/li[2]/app-goods-wishlist/button')
+    button_for_favourite = browser.find_element(By.XPATH, '//*[@id="#scrollArea"]/div[1]/div[2]/rz-product-main-info/div[1]/div[1]/ul/li/ul/li[2]')
     button_for_favourite.click()
     time.sleep(1)
     button_for_exit = browser.find_element(By.XPATH, '/html/body/app-root/rz-single-modal-window/div[3]/div[1]/button')

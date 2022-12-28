@@ -4,10 +4,11 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+browser.maximize_window()
 
 def scroll():
     browser.get('https://rozetka.com.ua/ua/acer-nxa8eeu002/p357787248/')
-    browser.execute_script("window.scrollTo(0, 600);")
+    browser.execute_script("window.scrollTo(0, 400);")
     time.sleep(2)
 
 def unordered_list_buttons():
